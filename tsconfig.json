@@ -21,6 +21,7 @@
     "noImplicitThis": true,
     "strictNullChecks": true,
     "noUnusedParameters": true,
+    "experimentalDecorators": true,
     "jsx": "preserve"
   },
   "exclude": [

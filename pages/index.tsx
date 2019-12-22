@@ -1,11 +1,25 @@
 import React from "react"
 import Layout from "../components/Layout"
+import { inject, observer } from "mobx-react"
+import { toJS } from "mobx"
 
-class Index extends React.Component {
+type Props = {
+  store: any
+}
+
+type State = {
+  pageData: any
+}
+
+@inject('store') @observer
+class Index extends React.Component<Props, State> {
+  state: State = {
+    pageData: toJS(this.props.store.data.homepage)
+  }
   render() {
     return (
       <Layout>
-        <h1>This will be the homepage!</h1>
+        You are on the {this.state.pageData.pageName} page!
       </Layout>
     )
   }

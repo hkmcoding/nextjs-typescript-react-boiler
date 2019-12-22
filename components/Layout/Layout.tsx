@@ -1,7 +1,6 @@
-import { ReactNode } from "react"
-
-//import Header when it exists
-//import Footer when it exists
+import React, { ReactNode } from 'react'
+//import Header
+//import Footer
 
 type Props = {
     children: ReactNode
@@ -9,11 +8,11 @@ type Props = {
 
 const Layout = (props: Props) => {
     return (
-        // <Header />
-        <main className={"container"}>
+        // <Header /> 
+        <div className={"container"}>
             {props.children}
-        </main>
-        // <Footer />
+        </div>
+        // <Footer /> 
     )
 }
 
