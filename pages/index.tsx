@@ -8,12 +8,12 @@ type Props = {
 }
 
 type State = {
-  pageData: any
+  pageData: {}
 }
 
 @inject('store') @observer
 class Index extends React.Component<Props, State> {
-  state: State = {
+  state = {
     pageData: toJS(this.props.store.data.homepage)
   }
   render() {
