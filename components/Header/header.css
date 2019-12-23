@@ -1,0 +1,28 @@
+header {
+    width: 100vw;
+    height: 5vh;
+    position: relative;
+}
+
+ul {
+    height: 100%;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navigationlink {
+    margin: 0 15px;
+}
+
+.navigationlink a {
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    text-decoration: underline;
+    font-weight: 600;
+}

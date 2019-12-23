@@ -1,6 +1,24 @@
 {
+    "header": {
+        "link": [
+            {
+                "path": "/",
+                "linkName": "Home"
+            },
+            {
+                "path": "/about",
+                "linkName": "About"
+            }
+        ]
+    },
     "homepage": {
-        "pageName": "index"
+        "pageName": "index",
+        "leftSide": {
+            "projectName": "new-stack-test-app"
+        },
+        "rightSide": {
+            "projectDescription": "This projects main goal was to familiarize myself with NextJS, TypeScript, React, and MobX. This description (and all other content on the site) is stored in a data.json file. MobX is responsible for handling the store, and every component get's the store injected. Using toJS from MobX, each component can store it's own page content. NextJS adds <head> to each page and also handles routing. TypeScript is used to ensure that each of the components are getting the required props and they are coming in as the right type. React is used throughout the project."
+        }
     },
     "about": {
         "pageName": "about"

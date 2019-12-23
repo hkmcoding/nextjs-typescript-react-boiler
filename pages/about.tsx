@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import Layout from '../components/Layout'
 import { inject, observer } from 'mobx-react'
 import { toJS } from 'mobx'
+import "../styles/pages/about.css"
 
-type Props = {
-    store: any
+interface Props {
+    store?: any
 }
 
-type State = {
+interface State {
     pageData: {}
 }
 
@@ -16,13 +17,17 @@ class About extends Component<Props, State> {
     state = {
         pageData: toJS(this.props.store.data.about)
     }
-    componentDidMount() {
-        console.log(typeof this.props.store)
-    }
     render() {
         return (
             <Layout>
-                <h1>This will be the {this.state.pageData.pageName} page!</h1>
+                <main className="about">
+                    <span>
+                        Under construction!
+                    </span>
+                    <p>
+                        (Not really, I was just practicing using next/router and next/link)
+                    </p>
+                </main>
             </Layout>
         )
     }

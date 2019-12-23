@@ -2,12 +2,11 @@ import React from 'react'
 import App from 'next/app'
 import store from "../store/store"
 import { Provider } from "mobx-react"
+import "../styles/styles.css"
 
 class MyApp extends App {
-  // Only uncomment this method if you have blocking data requirements for
-  // every single page in your application. This disables the ability to
-  // perform automatic static optimization, causing every page in your app to
-  // be server-side rendered.
+  // The following _app.js overrides NextJS default _app.js
+  // The overwrite is used to provide the store to the whole application
   
   static async getInitialProps(appContext) {
     const appProps = await App.getInitialProps(appContext);

@@ -1,0 +1,45 @@
+.index {
+    height: 90vh;
+    display: flex;
+}
+
+.column {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftside {
+    background-color: lightblue;
+}
+
+.rightside {
+    background-color: lightcoral;
+}
+
+.heading {
+    display: block;
+    font-weight: 600;
+}
+
+.description {
+    width: 50%;
+}
+
+@media only screen and (max-width: 650px) {
+    .index {
+        flex-direction: column;
+    }
+    .column {
+        width: 100vw;
+    }
+    .leftside {
+        height: 30%;
+    }
+    .description {
+        width: 75%;
+    }
+}
