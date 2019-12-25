@@ -25,6 +25,7 @@ class Index extends React.Component<Props, State> {
             <section className="column leftside">
               <span className="heading">Project Name:</span> 
               <span className="content">{this.state.pageData.leftSide.projectName}</span>
+              <span className="name">This name will be consistent on the about page due to MobX: {this.props.store.name}</span>
             </section>
             <section className="column rightside">
               <span className="heading">Project Description:</span>

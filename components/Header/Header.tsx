@@ -15,18 +15,13 @@ interface State {
     componentData: {}
 }
 
-// This allowed me to give my map a type, research into this
-type LinkObject<K extends keyof any, T> = {
-    [P in K]: T
-}
-
 @inject('store') @observer
 class Header extends React.Component<Props, State> {
     state = {
         componentData: toJS(this.props.store.data.header)
     }
     componentDidMount() {
-        console.log(this.props.router.pathname)
+        console.log(this.props.store)
     }
     render() {
         return (
@@ -37,7 +32,7 @@ class Header extends React.Component<Props, State> {
                 </Head>
                 <header>
                     <ul>
-                        {this.state.componentData.link.map((link: LinkObject<string, string>, i: number) => {
+                        {this.state.componentData.link.map((link: { path: string | import("url").UrlObject; linkName: {} }, i: number) => {
                             return (
                                 this.props.router.pathname === link.path ? 
                                 <li key={i} className="navigationlink active"><Link href={link.path}><a>{link.linkName}</a></Link></li>

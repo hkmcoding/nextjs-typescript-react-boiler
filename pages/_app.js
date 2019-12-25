@@ -5,8 +5,7 @@ import { Provider } from "mobx-react"
 import "../styles/styles.css"
 
 class MyApp extends App {
-  // The following _app.js overrides NextJS default _app.js
-  // The overwrite is used to provide the store to the whole application
+  // Custom _app.js used to wrap my whole application in the MobX <Provider>
   
   static async getInitialProps(appContext) {
     const appProps = await App.getInitialProps(appContext);
