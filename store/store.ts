@@ -13,8 +13,8 @@ class Store {
 
     // computed, perform calculations, access the data and perform some sort of calculation, will reflect in real time
     // don't use arrow functions as the this will be incorrect, in an arrow function, this references the parent
-    @computed get userName() {
-        return this.name
+    @computed get userNameGreeting() {
+        return this.name + " is cool!"
     }
 }
 

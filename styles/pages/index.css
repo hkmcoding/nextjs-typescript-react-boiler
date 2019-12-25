@@ -25,6 +25,11 @@
     font-weight: 600;
 }
 
+.name {
+    text-align: center;
+    width: 90%;
+}
+
 .description {
     width: 50%;
 }

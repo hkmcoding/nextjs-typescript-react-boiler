@@ -5,7 +5,7 @@ import { toJS } from 'mobx'
 import "../styles/pages/about.css"
 
 interface Props {
-    store?: any
+    store: any
 }
 
 interface State {
@@ -27,6 +27,7 @@ class About extends Component<Props, State> {
                 <main className="about">
                     <span>Under construction! (Not really, I was just practicing using next/router and next/link)</span>
                     <span>Your name is: {this.props.store.name}</span>
+                    <span>{this.props.store.userNameGreeting}</span>
                 </main>
             </Layout>
         )
